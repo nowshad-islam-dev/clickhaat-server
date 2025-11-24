@@ -9,7 +9,11 @@ const AppError = require('./utils/AppError');
 
 const app = express();
 
-const whitelist = ['http://localhost:4000', 'http://localhost:3000'];
+const whitelist = [
+  'http://localhost:4000',
+  'http://localhost:3000',
+  'http://localhost:4002',
+];
 const corsOptions = {
   origin: function (origin, callback) {
     if (!origin || whitelist.includes(origin)) {
